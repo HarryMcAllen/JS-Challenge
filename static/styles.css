@@ -3,8 +3,18 @@
 }
 .spinner:after {
   content: '◌';
+  position: absolute;
+  top: 25%;
+  left: 38%;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 #chart {
     border: 1px solid black;
 }
+

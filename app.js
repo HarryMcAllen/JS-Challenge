@@ -1,8 +1,11 @@
 const express = require('express')
 const path = require('path')
 const stocks = require('./stocks')
-
 const app = express()
+const cors = require('cors')
+app.use(cors());
+
+
 app.use(express.static(path.join(__dirname, 'static')))
 
 app.get('/stocks', async (req, res) => {
